@@ -50,9 +50,6 @@ final class MovieListViewModel {
     //MARK: - init
     init(topBarViewModel: TopBarViewModel? = nil) {
         self.topBarViewModel = topBarViewModel
-
-
-       
         setupSection()
     }
     
@@ -76,32 +73,33 @@ final class MovieListViewModel {
     }
     //MARK: private
     private func fetchPopularMovie() {
-        Service.shared.execute(Request(endPoint: .movie, pathComponnents: ["popular",], queryParammeters: [URLQueryItem.init(name: "api_key", value: "8983d582e6db4d50746d8e03ec9e79f5"), URLQueryItem(name: "page", value: "1")]), exepting: Movie.self) { result in
+        Service.shared.execute(Request(endPoint: .movie, pathComponnents: ["popular",], queryParammeters: [URLQueryItem.init(name: "api_key", value: "8983d582e6db4d50746d8e03ec9e79f5"), URLQueryItem(name: "page", value: "1")]), exepting: Movie.self) { [weak self] result in
+            guard let strongSelf = self else { return }
             switch result {
                 
             case .success(let movies):
                 guard let singleMovies = movies.results else { return }
-                if !self.popularMovies.contains(singleMovies) {
-                    self.popularMovies = singleMovies
+                if !strongSelf.popularMovies.contains(singleMovies) {
+                    strongSelf.popularMovies = singleMovies
                 }
                 DispatchQueue.main.async {
-                    self.delegate?.reloadCollection()
+                    strongSelf.delegate?.reloadCollection()
                 }
             case .failure(let error):
-                self.delegate?.showAlert(wit: error)
+                strongSelf.delegate?.showAlert(wit: error)
                 print("Error: ",error)
             }
             
         }
     }
     private func fetchNowMovie() {
-        Service.shared.execute(Request(endPoint: .movie, pathComponnents: ["now_playing",], queryParammeters: [URLQueryItem.init(name: "api_key", value: "8983d582e6db4d50746d8e03ec9e79f5"), URLQueryItem(name: "page", value: "1")]), exepting: NowMovies.self) { result in
+        Service.shared.execute(Request(endPoint: .movie, pathComponnents: ["now_playing",], queryParammeters: [URLQueryItem.init(name: "api_key", value: "8983d582e6db4d50746d8e03ec9e79f5"), URLQueryItem(name: "page", value: "1")]), exepting: NowMovies.self) { [weak self] result in
             switch result {
             case .success(let movies):
                 guard let singleMovies = movies.results else { return }
-                self.nowMovies = singleMovies
+                self?.nowMovies = singleMovies
             case .failure(let error):
-                self.delegate?.showAlert(wit: error)
+                self?.delegate?.showAlert(wit: error)
                 print(error)
             }
             

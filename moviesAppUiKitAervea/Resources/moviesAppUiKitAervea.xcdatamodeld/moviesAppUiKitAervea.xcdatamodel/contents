@@ -3,5 +3,6 @@
     <entity name="CDMovie" representedClassName="CDMovie" syncable="YES" codeGenerationType="class">
         <attribute name="stringUrl" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="uniqueIdentifierKey" optional="YES" attributeType="String"/>
     </entity>
 </model>

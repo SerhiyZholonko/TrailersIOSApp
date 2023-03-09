@@ -57,7 +57,6 @@ class MoreNowMovieViewController: UIViewController {
 }
 
 //MARK: - ex MovieNowListViewDelegate
-
 extension MoreNowMovieViewController: MovieNowListViewDelegate {
     func toDetailView(singleMovie: NowSingleMovie) {
         navigationController?.pushViewController(MovieNowDetaillViewController(viewModel: NowDetaillViewViewModel(movie: singleMovie)), animated: true)
@@ -67,7 +66,6 @@ extension MoreNowMovieViewController: MovieNowListViewDelegate {
 
 
 //MARK: - ex SearchViewControllerDelegate
-//TODO: - to mvvm
 extension MoreNowMovieViewController: SearchViewControllerDelegate {
     func didChangeTextField(text: String) {
         nowList.viewModel.callBack(text: text) {

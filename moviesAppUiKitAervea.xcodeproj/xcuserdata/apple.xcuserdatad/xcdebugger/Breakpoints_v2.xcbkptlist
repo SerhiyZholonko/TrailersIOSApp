@@ -170,8 +170,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "setupSection()"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,8 +186,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "setupSection()"
             landmarkType = "7">
          </BreakpointContent>
@@ -323,8 +323,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "setupSection()"
             landmarkType = "7">
          </BreakpointContent>
@@ -547,8 +547,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "init(topBarViewModel:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -563,8 +563,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "fetchPopularMovie()"
             landmarkType = "7">
          </BreakpointContent>
@@ -579,8 +579,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "fetchNowMovie()"
             landmarkType = "7">
          </BreakpointContent>
@@ -595,8 +595,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "fetchNowMovie()"
             landmarkType = "7">
          </BreakpointContent>
@@ -611,8 +611,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "fetchNowMovie()"
             landmarkType = "7">
          </BreakpointContent>
@@ -853,8 +853,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
             endingLineNumber = "41"
-            landmarkName = "CPeopleCollectionViewCell"
-            landmarkType = "3">
+            landmarkName = "configureCell(with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1075,8 +1075,8 @@
             filePath = "moviesAppUiKitAervea/Controllers/Core/MovieViewController/MoreControllers/MoreNowMovieViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "MoreNowMovieViewController"
             landmarkType = "21">
          </BreakpointContent>
@@ -1493,6 +1493,118 @@
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "init(frame:vc:viewModel:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "88F51B87-BDFB-443B-A5FC-2A256EC04658"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieNowListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "collectionView(_:layout:referenceSizeForFooterInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A1E67EE-8BA2-4DBC-B6D5-657B4E7AD9E7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieNowListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "fetchNowMovie()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83F25787-160D-4FF7-AAF8-024D6296B2F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieNowListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "collectionView(_:willDisplay:forItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E4C7511-0207-412B-8F4E-34ED9A351C5A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieNowListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "collectionView(_:willDisplay:forItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B0A6535-6A35-4D7F-8700-1309F8381566"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/TVViewViewModels/MoreListViewModel/MoreTopListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "collectionView(_:willDisplay:forItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE45DDF3-DC44-41D4-BE62-EFA7E005FE5B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/NowDetaillViewModel/NowDetaillViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "addToFavorite()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A0084DAD-4923-435C-9E4B-409FAFA3CEE7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/NowDetaillViewModel/NowDetaillViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "checkDublicatMovie()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

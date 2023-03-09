@@ -54,7 +54,14 @@ final class PopularDetaillViewViewModel {
         }
     }
     func addToFavorite() {
+        let movies: [CDMovie] = CoreDataManager.shared.fetchData(entityName: "CDMovie")
+        for movie in movies {
+            if movie.uniqueIdentifierKey == "\(publicId)" {
+                return
+            }
+        }
         let movie = CDMovie(context: CoreDataManager.shared.managedObjectContext)
+        movie.uniqueIdentifierKey = "\(publicId)"
         movie.title = title
         movie.stringUrl = stringUrl
         CoreDataManager.shared.save(movie)
@@ -73,6 +80,14 @@ final class PopularDetaillViewViewModel {
         }
     }
     //MARK: - Private
+    private func checkDublicatMovie() {
+        let movies: [CDMovie] = CoreDataManager.shared.fetchData(entityName: "CDMovie")
+        for movie in movies {
+            if movie.uniqueIdentifierKey == "\(publicId)" {
+                return
+            }
+        }
+    }
     private let movie: SingleMovie
   //MARK: - Init
     init(vc: UIViewController? = nil, movie: SingleMovie) {

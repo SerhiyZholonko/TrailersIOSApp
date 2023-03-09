@@ -28,6 +28,9 @@ class MoreTopListView: UIView {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout )
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.register(TopTVCollectionViewCell.self, forCellWithReuseIdentifier: TopTVCollectionViewCell.identifier)
+        collection.register(MoViewNowListViewUnderCollevtionViewSpiner.self,
+                            forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+                                withReuseIdentifier: MoViewNowListViewUnderCollevtionViewSpiner.identifier)
         return collection
     }()
     init(frame: CGRect, viewModel: [RateTVCollectionViewCellModel] ) {
@@ -78,6 +81,21 @@ class MoreTopListView: UIView {
 //MARK: - ex MoreTopListViewModelDelegate
 
 extension MoreTopListView: MoreTopListViewModelDelegate {
+    func startSpiner() {
+        DispatchQueue.main.async {
+            self.spiner.startAnimating()
+        }
+    }
+    
+    func reloadCollectionView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+            self.collectionView.reloadData()
+            self.spiner.stopAnimating()
+        }
+     
+
+    }
+
     func toDetaillView(singleTVShow: SingleTopShow) {
         delegate?.toDetaillViewControler(singleTVShow: singleTVShow)
     }

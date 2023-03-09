@@ -30,6 +30,9 @@ class MovieNowListView: UIView {
         collection.register(MoviewsHeaderNowCollectionReusableView.self,
                             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: MoviewsHeaderNowCollectionReusableView.identifier)
+        collection.register(MoViewNowListViewUnderCollevtionViewSpiner.self,
+                            forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+                                withReuseIdentifier: MoViewNowListViewUnderCollevtionViewSpiner.identifier)
         return collection
     }()
     init(frame: CGRect, viewModel: [NowCollectionViewCellViewModel] ) {
@@ -83,6 +86,21 @@ class MovieNowListView: UIView {
 //MARK: - ex MovieNowListViewModelDelegate
 
 extension MovieNowListView: MovieNowListViewModelDelegate {
+    func startSpiner() {
+        DispatchQueue.main.async {
+            self.spiner.startAnimating()
+        }
+    }
+    
+    func reloadCollectionView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+            self.collectionView.reloadData()
+            self.spiner.stopAnimating()
+        }
+     
+
+    }
+
     func toDetailController(singleMovie: NowSingleMovie) {
         delegate?.toDetailView(singleMovie: singleMovie)
     }

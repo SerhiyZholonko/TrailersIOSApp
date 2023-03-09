@@ -50,6 +50,8 @@ final class NowDetaillViewViewModel {
     public var publicId: Int? {
         return movie.id
     }
+//
+
     //MARK: - Private
     private let movie: NowSingleMovie
     private var nowMovieDetail: MovieDetailsModel? {
@@ -59,11 +61,20 @@ final class NowDetaillViewViewModel {
         }
     }
     func addToFavorite() {
-        let movie = CDMovie(context: CoreDataManager.shared.managedObjectContext)
-        movie.title = title
-        movie.stringUrl = stringUrl
+        let movies: [CDMovie] = CoreDataManager.shared.fetchData(entityName: "CDMovie")
+        for movie in movies {
+            if movie.uniqueIdentifierKey == pId {
+                return
+            }
+        }
+            let movie = CDMovie(context: CoreDataManager.shared.managedObjectContext)
+        movie.uniqueIdentifierKey = pId
+            movie.title = title
+            movie.stringUrl = stringUrl
         CoreDataManager.shared.save(movie)
+            DataService.shared.setFavoriteStatus(for: title, with: false)
     }
+   
      func fetchDetailMovie() {
         Service.shared.execute(Request(endPoint: .movie, pathComponnents: ["\(movie.id ?? 0)",], queryParammeters: [URLQueryItem.init(name: "api_key", value: "8983d582e6db4d50746d8e03ec9e79f5")]), exepting: MovieDetailsModel.self) { result in
             switch result {
@@ -76,6 +87,10 @@ final class NowDetaillViewViewModel {
             }
             
         }
+    }
+    //Private
+    private func checkDublicatMovie() {
+     
     }
   //MARK: - Init
     init(vc: UIViewController? = nil, movie: NowSingleMovie) {

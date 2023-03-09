@@ -46,7 +46,14 @@ final class TVNowDetaillViewModel {
         self.movie = movie
     }
     func addToFavorite() {
+        let movies: [CDMovie] = CoreDataManager.shared.fetchData(entityName: "CDMovie")
+        for movie in movies {
+            if movie.uniqueIdentifierKey == "\(movieId)" {
+                return
+            }
+        }
         let movie = CDMovie(context: CoreDataManager.shared.managedObjectContext)
+        movie.uniqueIdentifierKey = "\(movieId)"
         movie.title = title
         movie.stringUrl = stringUrl
         CoreDataManager.shared.save(movie)
@@ -60,4 +67,14 @@ final class TVNowDetaillViewModel {
         ImageLoader.shared.downloadImage(url, completion: completion)
     }
 
+    
+    //Private
+    private func checkDublicatMovie() {
+        let movies: [CDMovie] = CoreDataManager.shared.fetchData(entityName: "CDMovie")
+        for movie in movies {
+            if movie.uniqueIdentifierKey == "\(movieId)" {
+                return
+            }
+        }
+    }
 }

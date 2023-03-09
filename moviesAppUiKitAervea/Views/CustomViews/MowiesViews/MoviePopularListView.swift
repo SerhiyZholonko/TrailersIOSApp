@@ -30,6 +30,9 @@ class MoviePopularListView: UIView {
         collection.register(MoviewsHeaderPopularCollectionReusableView.self,
                             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: MoviewsHeaderPopularCollectionReusableView.identifier)
+        collection.register(MoViewNowListViewUnderCollevtionViewSpiner.self,
+                            forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+                                withReuseIdentifier: MoViewNowListViewUnderCollevtionViewSpiner.identifier)
         return collection
     }()
     init(frame: CGRect, viewModel: [PopularCollectionViewCellViewModel] ) {
@@ -85,6 +88,20 @@ extension MoviePopularListView: MoviePopularListViewModelDelegate {
     }
     
     
+    func startSpiner() {
+        DispatchQueue.main.async {
+            self.spiner.startAnimating()
+        }
+    }
     
+    func reloadCollectionView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+            self.collectionView.reloadData()
+            self.spiner.stopAnimating()
+        }
+     
+
+    }
+
     
 }

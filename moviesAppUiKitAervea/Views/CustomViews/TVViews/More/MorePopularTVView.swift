@@ -26,6 +26,9 @@ class MorePopularTVView: UIView {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout )
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.register(PopularTVCollectionViewCell.self, forCellWithReuseIdentifier: PopularTVCollectionViewCell.identifier)
+        collection.register(MoViewNowListViewUnderCollevtionViewSpiner.self,
+                            forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+                                withReuseIdentifier: MoViewNowListViewUnderCollevtionViewSpiner.identifier)
         return collection
     }()
     init(frame: CGRect, viewModel: [PopularTVCollectionViewCellModel] ) {
@@ -76,6 +79,21 @@ class MorePopularTVView: UIView {
 //MARK: - ex MorePopularListViewModelDelegate
 
 extension MorePopularTVView: MorePopularListViewModelDelegate {
+    func startSpiner() {
+        DispatchQueue.main.async {
+            self.spiner.startAnimating()
+        }
+    }
+    
+    func reloadCollectionView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+            self.collectionView.reloadData()
+            self.spiner.stopAnimating()
+        }
+     
+
+    }
+
     func toDetaillView(singleTVShow: SinglePopularShow) {
         delegate?.toDetaillViewController(singleTVShow: singleTVShow)
     }
