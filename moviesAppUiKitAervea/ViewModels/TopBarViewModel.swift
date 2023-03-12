@@ -18,7 +18,7 @@ struct TopBarViewModel {
     enum TopBarType {
         case movie
         case tv
-        case favorite
+        case profile
         
         var title: String {
             switch self {
@@ -26,8 +26,8 @@ struct TopBarViewModel {
                 return "Movies".uppercased()
             case .tv:
                 return "TV".uppercased()
-            case .favorite:
-                return "Favorite".uppercased()
+            case .profile:
+                return "Profile".uppercased()
             }
         }
         var buttonImage: UIImage? {
@@ -36,7 +36,7 @@ struct TopBarViewModel {
                 return UIImage(named: "searchIcon")
             case .tv:
                 return UIImage(named: "searchIcon")
-            case .favorite:
+            case .profile:
                 return UIImage(named: "searchIcon")
             }
         }

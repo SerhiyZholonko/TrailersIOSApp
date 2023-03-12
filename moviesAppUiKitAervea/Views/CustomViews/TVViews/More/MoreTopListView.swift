@@ -27,7 +27,7 @@ class MoreTopListView: UIView {
         layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout )
         collection.translatesAutoresizingMaskIntoConstraints = false
-        collection.register(TopTVCollectionViewCell.self, forCellWithReuseIdentifier: TopTVCollectionViewCell.identifier)
+        collection.register(RateTVCollectionViewCell.self, forCellWithReuseIdentifier: RateTVCollectionViewCell.identifier)
         collection.register(MoViewNowListViewUnderCollevtionViewSpiner.self,
                             forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
                                 withReuseIdentifier: MoViewNowListViewUnderCollevtionViewSpiner.identifier)

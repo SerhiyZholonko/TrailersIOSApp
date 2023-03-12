@@ -13,6 +13,7 @@ class FavoriteReactionSubView : ReactionSubView {
         super.init(frame: frame, viewModel: viewModel)
         reactionButton.addTarget(self, action: #selector(didTappedFavorite), for: .touchUpInside)
         setupUI()
+   
     }
     
     required init?(coder: NSCoder) {

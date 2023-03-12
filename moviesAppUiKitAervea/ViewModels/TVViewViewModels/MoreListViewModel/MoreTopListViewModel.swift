@@ -67,7 +67,7 @@ extension MoreTopListViewModel: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopTVCollectionViewCell.identifier, for: indexPath) as! TopTVCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RateTVCollectionViewCell.identifier, for: indexPath) as! RateTVCollectionViewCell
         cell.configureCell(with: viewModel[indexPath.item])
         return cell
     }

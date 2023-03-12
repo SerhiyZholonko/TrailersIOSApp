@@ -161,38 +161,6 @@
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8ED998B5-16CE-41B8-8CE8-239781368D42"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "setupSection()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "34D7FF00-C5A4-41A2-8168-FA2EA30E2AE1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "setupSection()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
             uuid = "CFC3F3C3-7835-4033-B160-1E55CA5A37F7"
@@ -228,8 +196,8 @@
             filePath = "moviesAppUiKitAervea/Views/Cells/MoviesCells/NowCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "configure(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -244,8 +212,8 @@
             filePath = "moviesAppUiKitAervea/Views/Cells/MoviesCells/NowCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "configure(with:)"
             landmarkType = "7">
             <Locations>
@@ -307,25 +275,9 @@
             filePath = "moviesAppUiKitAervea/Views/Cells/MoviesCells/NowCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "configure(with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "000BEE75-FE3D-4A08-A5E1-280438154958"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "setupSection()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -348,54 +300,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C1A08BC4-B0A5-490F-B5A1-9C303CD1EA1C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "init(topBarViewModel:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C1A08BC4-B0A5-490F-B5A1-9C303CD1EA1C - c34a6874d974c137"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "moviesAppUiKitAervea.MovieListViewModel.__allocating_init(topBarViewModel: Swift.Optional&lt;moviesAppUiKitAervea.TopBarViewModel&gt;) -&gt; moviesAppUiKitAervea.MovieListViewModel"
-                  moduleName = "moviesAppUiKitAervea"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/movies-app-ui-kit-aervea/moviesAppUiKitAervea/moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "C1A08BC4-B0A5-490F-B5A1-9C303CD1EA1C - 759620151f1dbc75"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "moviesAppUiKitAervea.MovieListViewModel.init(topBarViewModel: Swift.Optional&lt;moviesAppUiKitAervea.TopBarViewModel&gt;) -&gt; moviesAppUiKitAervea.MovieListViewModel"
-                  moduleName = "moviesAppUiKitAervea"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/movies-app-ui-kit-aervea/moviesAppUiKitAervea/moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "48">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "82611A4B-9163-454F-9059-31A3578F93EF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -403,8 +307,8 @@
             filePath = "moviesAppUiKitAervea/Controllers/Core/MovieViewController/MoviesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "MoviesViewController"
             landmarkType = "21">
          </BreakpointContent>
@@ -419,8 +323,8 @@
             filePath = "moviesAppUiKitAervea/Controllers/Core/MovieViewController/MoviesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
             landmarkName = "reloadCollection()"
             landmarkType = "7">
          </BreakpointContent>
@@ -435,8 +339,8 @@
             filePath = "moviesAppUiKitAervea/Controllers/Core/MovieViewController/MoviesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -451,8 +355,8 @@
             filePath = "moviesAppUiKitAervea/Controllers/Core/MovieViewController/MoviesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -470,166 +374,6 @@
             startingLineNumber = "20"
             endingLineNumber = "20"
             landmarkName = "tabBarController(_:didSelect:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C4E7E5C5-6929-401D-86C8-BA53D498F388"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "popularMovies"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "C4E7E5C5-6929-401D-86C8-BA53D498F388 - 9859526b1a22ad5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "moviesAppUiKitAervea.MovieListViewModel.popularMovies.getter : Swift.Array&lt;moviesAppUiKitAervea.SingleMovie&gt;"
-                  moduleName = "moviesAppUiKitAervea"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/movies-app-ui-kit-aervea/moviesAppUiKitAervea/moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  uuid = "C4E7E5C5-6929-401D-86C8-BA53D498F388 - f8c37de3ef953ed9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "moviesAppUiKitAervea.MovieListViewModel.popularMovies.setter : Swift.Array&lt;moviesAppUiKitAervea.SingleMovie&gt;"
-                  moduleName = "moviesAppUiKitAervea"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/movies-app-ui-kit-aervea/moviesAppUiKitAervea/moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "100">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2AD92060-2E54-48CD-A174-5A78ABCEF3C6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "MovieListViewModel"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DDE0EE17-D57F-4D7A-8FA2-292B0A476FC0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "init(topBarViewModel:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8AA63558-59D0-487E-A2A6-5DCBB13813BE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "fetchPopularMovie()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FFD22BCA-2C3E-4715-86CE-D20BFA14D191"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "fetchNowMovie()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9EFC48D4-D084-4064-A665-2B2248DD1AF0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "fetchNowMovie()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3A3B296E-ABF7-4069-AABF-EAEEB4A30C71"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "fetchNowMovie()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C17892A6-CBE6-4ED1-937C-028E001019D9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/MovieListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "init(topBarViewModel:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -659,8 +403,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/TVViewViewModels/DetaillTVViewModel/RateDetaillTVViewModel/CPeopleControllerViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "fetchData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -675,8 +419,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/TVViewViewModels/DetaillTVViewModel/RateDetaillTVViewModel/CPeopleControllerViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "fetchData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -707,8 +451,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/TVViewViewModels/DetaillTVViewModel/RateDetaillTVViewModel/CPeopleControllerViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "fechActorsTV()"
             landmarkType = "7">
          </BreakpointContent>
@@ -723,8 +467,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/TVViewViewModels/DetaillTVViewModel/RateDetaillTVViewModel/CPeopleControllerViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "fechActorsTV()"
             landmarkType = "7">
          </BreakpointContent>
@@ -755,8 +499,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/TVViewViewModels/DetaillTVViewModel/RateDetaillTVViewModel/CPeopleControllerViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "fetchData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -771,8 +515,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/TVViewViewModels/DetaillTVViewModel/RateDetaillTVViewModel/CPeopleControllerViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "fetchData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -835,8 +579,8 @@
             filePath = "moviesAppUiKitAervea/ViewModels/TVViewViewModels/DetaillTVViewModel/RateDetaillTVViewModel/CPeopleControllerViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "fechActorsMovies()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1011,8 +755,8 @@
             filePath = "moviesAppUiKitAervea/Views/Cells/TVCells/PopularTVCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "configureCell(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1602,9 +1346,169 @@
             filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/NowDetaillViewModel/NowDetaillViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "checkDublicatMovie()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2207736C-B3ED-4D8B-840C-6685CEA01C77"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/Views/CustomViews/ReactionSubViews/FavoriteReactionSubView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "setStatusForFavoriteButton()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE5AC4FB-8B74-4AE4-A4D8-68D99685320E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/FavoriteListViewModel/FavoriteListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "pMovies"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF5BFD69-20DA-4C10-939B-A9C8E90B6C81"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/FavoriteListViewModel/FavoriteListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "pMovies"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4095D819-7D59-4F17-99FF-C08BBDA08D72"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/FavoriteListViewModel/FavoriteListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "didTapLike(cell:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7BAEB84D-E1DA-444C-9B97-3EDDADA18FBD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/FavoriteListViewModel/FavoriteListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "didTapLike(cell:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A8B346FA-2B56-47AB-9A9C-01133C32E819"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/FavoriteListViewModel/FavoriteListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "didTapLike(cell:complition:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A8B346FA-2B56-47AB-9A9C-01133C32E819 - ad8bf7d275904a88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "moviesAppUiKitAervea.FavoriteListViewModel.didTapLike(cell: moviesAppUiKitAervea.FavoriteCell, complition: () -&gt; ()) -&gt; ()"
+                  moduleName = "moviesAppUiKitAervea"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/movies-app-ui-kit-aervea/moviesAppUiKitAervea/moviesAppUiKitAervea/ViewModels/FavoriteListViewModel/FavoriteListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "396">
+               </Location>
+               <Location
+                  uuid = "A8B346FA-2B56-47AB-9A9C-01133C32E819 - ad8bf7d275904a88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "moviesAppUiKitAervea.FavoriteListViewModel.didTapLike(cell: moviesAppUiKitAervea.FavoriteCell, complition: () -&gt; ()) -&gt; ()"
+                  moduleName = "moviesAppUiKitAervea"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/movies-app-ui-kit-aervea/moviesAppUiKitAervea/moviesAppUiKitAervea/ViewModels/FavoriteListViewModel/FavoriteListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "444">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0902505E-C3B4-4F6F-99A2-59FFEC1FF725"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/FavoriteListViewModel/FavoriteListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "didTapLike(cell:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "581608FF-85DB-498C-BB32-53062DA1CE5E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviesAppUiKitAervea/ViewModels/MoviesViewModels/NowDetaillViewModel/ReactionViewModel/ReactionSubViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "keyboardWillShow()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

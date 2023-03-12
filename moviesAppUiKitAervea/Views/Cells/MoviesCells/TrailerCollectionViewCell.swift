@@ -46,7 +46,9 @@ class TrailerCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     public func configure(with viewModel: TrailerCollectionViewCellViewModel) {
-        trailerImage.image = viewModel.getImage()
+        DispatchQueue.main.async {
+            self.trailerImage.image = viewModel.getImage()
+        }
     }
     
     //MARK: - private

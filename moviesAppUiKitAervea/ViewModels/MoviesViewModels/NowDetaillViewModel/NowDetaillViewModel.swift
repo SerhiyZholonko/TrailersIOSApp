@@ -69,10 +69,11 @@ final class NowDetaillViewViewModel {
         }
             let movie = CDMovie(context: CoreDataManager.shared.managedObjectContext)
         movie.uniqueIdentifierKey = pId
+//        movie.isFavorite = false
             movie.title = title
             movie.stringUrl = stringUrl
         CoreDataManager.shared.save(movie)
-            DataService.shared.setFavoriteStatus(for: title, with: false)
+//            DataService.shared.setFavoriteStatus(for: title, with: false)
     }
    
      func fetchDetailMovie() {
@@ -96,6 +97,7 @@ final class NowDetaillViewViewModel {
     init(vc: UIViewController? = nil, movie: NowSingleMovie) {
         self.viewController = vc
         self.movie = movie
+        
     }
     
     //hear add fetch func

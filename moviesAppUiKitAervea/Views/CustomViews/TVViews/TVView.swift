@@ -70,7 +70,7 @@ class TVView: UIView {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(MoviewsHeaderPopularCollectionReusableView.self, forSupplementaryViewOfKind: "Popular", withReuseIdentifier: MoviewsHeaderPopularCollectionReusableView.identifier)
         collectionView.register(PopularTVCollectionViewCell.self, forCellWithReuseIdentifier: PopularTVCollectionViewCell.identifier)
-        collectionView.register(TopTVCollectionViewCell.self, forCellWithReuseIdentifier: TopTVCollectionViewCell.identifier)
+        collectionView.register(RateTVCollectionViewCell.self, forCellWithReuseIdentifier: RateTVCollectionViewCell.identifier)
         collectionView.register(MoreCollectionViewCell.self, forCellWithReuseIdentifier: MoreCollectionViewCell.identifier)
         return collectionView
         }

@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct ReactionSubViewModel {
+final class ReactionSubViewModel {
     //MARK: - Public
     public var pImageName: String{
         return imageName
@@ -17,7 +17,7 @@ struct ReactionSubViewModel {
         return title
     }
     public var ifLike: Bool {
-        get {
+         get {
             return DataService.shared.getFavoriteStatus(for: likerMarker)
         }
         set {
@@ -27,10 +27,12 @@ struct ReactionSubViewModel {
     }
     public var ifFavorite: Bool {
         get {
+        
             return DataService.shared.getFavoriteStatus(for: favoriteMarker)
         }
         set {
             DataService.shared.setFavoriteStatus(for: favoriteMarker, with: newValue)
+
             viewModelDidChange?(self)
         }
     }
@@ -48,7 +50,7 @@ struct ReactionSubViewModel {
     //MARK: - Private
     private var imageName: String
     private var title: String
-    private let likerMarker: String
+    private var likerMarker: String
     private let favoriteMarker: String
     private let commentMarker: String
 
@@ -59,15 +61,25 @@ struct ReactionSubViewModel {
         self.likerMarker = likerMarker
         self.favoriteMarker = favoriteMarker
         self.commentMarker = commentMarker
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .internetDown, object: nil)
     }
-    mutating func likeButtonPressed() {
+     func likeButtonPressed() {
         self.ifLike.toggle()
     }
-    mutating func commentButtonPressed() {
+     func commentButtonPressed() {
         self.ifComment.toggle()
     }
-    mutating func favoriteButtonPressed() {
-        self.ifFavorite.toggle()
+     func favoriteButtonPressed() {
+        self.ifFavorite = true
     }
+    @objc func keyboardWillShow(){
+        print("Notification")
+        self.ifFavorite = false
+       }
    
+}
+
+
+extension Notification.Name{
+    static let internetDown = Notification.Name("internetDown")
 }

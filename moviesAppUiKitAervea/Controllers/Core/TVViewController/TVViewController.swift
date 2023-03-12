@@ -92,7 +92,7 @@ extension TVViewController: UICollectionViewDelegate, UICollectionViewDataSource
             
         case .top(viewModel: let viewModel):
             if indexPath.item <= 6 {
-                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopTVCollectionViewCell.identifier, for: indexPath) as? TopTVCollectionViewCell else { return UICollectionViewCell() }
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RateTVCollectionViewCell.identifier, for: indexPath) as? RateTVCollectionViewCell else { return UICollectionViewCell() }
                 let viewModel = viewModel[indexPath.item]
                 cell.configureCell(with: viewModel)
                 return cell

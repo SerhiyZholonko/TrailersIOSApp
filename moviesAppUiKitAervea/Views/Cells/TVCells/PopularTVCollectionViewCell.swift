@@ -69,14 +69,17 @@ class PopularTVCollectionViewCell: UICollectionViewCell {
     }
     public func configureCell(with viewModel: PopularTVCollectionViewCellModel) {
         self.viewModel = viewModel
-        tvTitleLabel.text = viewModel.titleTV.uppercased()
-        tvRateView.viewModel = viewModel
-        if viewModel.stringUrlTV != nil {
-            guard let url = URL(string: viewModel.stringUrlTV!) else { return }
-            tvImageView.sd_setImage(with: url)
-        } else {
-            tvImageView.image = UIImage(systemName: "nosign")
+        DispatchQueue.main.async {
+            self.tvTitleLabel.text = viewModel.titleTV.uppercased()
+            self.tvRateView.viewModel = viewModel
+            if viewModel.stringUrlTV != nil {
+                guard let url = URL(string: viewModel.stringUrlTV!) else { return }
+                self.tvImageView.sd_setImage(with: url)
+            } else {
+                self.tvImageView.image = UIImage(systemName: "nosign")
+            }
         }
+       
       
 
     }

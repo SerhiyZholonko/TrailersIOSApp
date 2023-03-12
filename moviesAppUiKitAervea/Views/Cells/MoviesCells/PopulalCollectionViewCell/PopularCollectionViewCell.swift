@@ -62,12 +62,14 @@ class PopularCollectionViewCell: UICollectionViewCell {
     //MARK: - Public
     
     public func configure(with viewModel: PopularCollectionViewCellViewModel) {
-
+        print("PopularCollectionViewCellViewModel: ", viewModel)
         guard let url = URL(string: viewModel.urlString) else { return }
-        movieImageView.sd_setImage(with: url)
-        titleLabel.text = viewModel.title.uppercased()
-        markView.viewModel = viewModel
-        yearLabel.text = viewModel.year
+        DispatchQueue.main.async {
+            self.movieImageView.sd_setImage(with: url)
+            self.titleLabel.text = viewModel.title.uppercased()
+            self.markView.viewModel = viewModel
+            self.yearLabel.text = viewModel.year
+        }
     }
     //MARK: - Private
     private func addConstarints() {

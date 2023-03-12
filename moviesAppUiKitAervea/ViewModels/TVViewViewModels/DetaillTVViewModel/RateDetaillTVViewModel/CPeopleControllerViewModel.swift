@@ -31,13 +31,12 @@ final class CPeopleControllerViewModel {
     init(movieId: Int? = nil, type: CPeopleControllerViewModelType) {
         self.type = type
         self.movieId = movieId
-      fetchData()
+        fetchData()
     }
     //MARK: - funcs
     //MARK: - Public
     public func numberOfItemsInSection() -> Int {
         
-        print("DEBAG: ", movieActors.count)
         return movieActors.count
     }
     public func getCurenItem(index: Int) -> Cast {
@@ -50,7 +49,7 @@ final class CPeopleControllerViewModel {
             fechActorsMovies()
         case .tv:
             fechActorsTV()
-
+            
         }
     }
     private func fechActorsMovies() {
@@ -59,7 +58,7 @@ final class CPeopleControllerViewModel {
                 
             case .success(let actors):
                 self?.movieActors = actors.cast ?? []
-        
+                
             case .failure(let error):
                 print(error)
             }
@@ -67,16 +66,16 @@ final class CPeopleControllerViewModel {
         }
     }
     private func fechActorsTV() {
-       Service.shared.execute(Request(endPoint: .tv, pathComponnents: ["\(movieId ?? 0)", "credits"], queryParammeters: [URLQueryItem.init(name: "api_key", value: "8983d582e6db4d50746d8e03ec9e79f5")]), exepting: ActorsModel.self) { [weak self] result in
-           switch result {
-               
-           case .success(let actors):
-               self?.movieActors = actors.cast ?? []
-
-           case .failure(let error):
-               print(error)
-           }
-           
-       }
-   }
+        Service.shared.execute(Request(endPoint: .tv, pathComponnents: ["\(movieId ?? 0)", "credits"], queryParammeters: [URLQueryItem.init(name: "api_key", value: "8983d582e6db4d50746d8e03ec9e79f5")]), exepting: ActorsModel.self) { [weak self] result in
+            switch result {
+                
+            case .success(let actors):
+                self?.movieActors = actors.cast ?? []
+                
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+    }
 }

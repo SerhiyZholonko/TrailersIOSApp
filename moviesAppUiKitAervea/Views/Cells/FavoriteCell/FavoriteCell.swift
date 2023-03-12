@@ -31,6 +31,7 @@ final class FavoriteCell: UICollectionViewCell {
        let iv = UIImageView()
         iv.backgroundColor = .systemGreen
         iv.layer.cornerRadius = 10
+        iv.clipsToBounds = true
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()
@@ -46,6 +47,8 @@ final class FavoriteCell: UICollectionViewCell {
        let label = UILabel()
         label.text = "Title"
         label.textAlignment = .center
+        label.numberOfLines = 2
+        label.font = .systemFont(ofSize: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -69,7 +72,7 @@ final class FavoriteCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             movieImageView.topAnchor.constraint(equalTo: topAnchor),
             movieImageView.leftAnchor.constraint(equalTo: leftAnchor),
-            movieImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
+            movieImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -40),
             movieImageView.rightAnchor.constraint(equalTo: rightAnchor),
             
             titleLabel.topAnchor.constraint(equalTo: movieImageView.bottomAnchor),

@@ -12,6 +12,7 @@ class MoviesViewController: UIViewController {
  
     
 //MARK: - Properties
+    private var sectionsToReload: [Int] = []
     private var viewModel = MovieListViewModel(topBarViewModel: TopBarViewModel(type: .movie))
     lazy var topBarView: TopBar = {
         let view = TopBar(frame: .zero, viewModel: viewModel.topBar ?? .init(type: .tv))
@@ -46,12 +47,6 @@ class MoviesViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
 //MARK: - Private
-    @objc func keyboardWillShow(){
-          print("NotificationCenter")
-        DispatchQueue.main.async {
-            self.movieListView.collectionView?.reloadData()
-        }
-      }
     
     private func addConstraints() {
         NSLayoutConstraint.activate([
@@ -81,11 +76,11 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
         switch sectionType {
             
         case .trailer:
-            return 1
+            return viewModel.trailerCount
         case .now:
-            return 3
+            return viewModel.nowCount
         case .popular:
-            return 6
+            return viewModel.popularCount
         }
     }
     
@@ -100,13 +95,14 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
         }
         
     }
+  
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-     
         let sectionType = viewModel.sections[indexPath.section]
         switch sectionType {
         case .trailer(let viewModel):
             if indexPath.item == 0 {
-                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TrailerCollectionViewCell.identifier, for: indexPath) as? TrailerCollectionViewCell else { return UICollectionViewCell() }
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TrailerCollectionViewCell.identifier, for: indexPath) as? TrailerCollectionViewCell else { fatalError("did not cell TrailerCollectionViewCell") }
                 cell.configure(with: viewModel)
                 return cell
             } else {
@@ -114,36 +110,92 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
                     return UICollectionViewCell()
                 }
                 return cell
-                
             }
         case .now(viewModel: let viewModel):
             if indexPath.item <= 1 {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NowCollectionViewCell.identifier, for: indexPath) as? NowCollectionViewCell else { return UICollectionViewCell() }
-            cell.configure(with: viewModel[indexPath.item])
-            return cell
-        }
-            else {
-               guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoreCollectionViewCell.identifier, for: indexPath) as? MoreCollectionViewCell else {
-                   return UICollectionViewCell()
-               }
-               return cell
-
-           }
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NowCollectionViewCell.identifier, for: indexPath) as? NowCollectionViewCell else { return UICollectionViewCell() }
+                cell.configure(with: viewModel[indexPath.item])
+                return cell
+            } else {
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoreCollectionViewCell.identifier, for: indexPath) as? MoreCollectionViewCell else {
+                    fatalError("did not cell MoreCollectionViewCell")
+                }
+                return cell
+            }
         case .popular(viewModel: let viewModel):
             if indexPath.item <= 4 {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.identifier, for: indexPath) as? PopularCollectionViewCell else { return UICollectionViewCell() }
-            cell.configure(with: viewModel[indexPath.item])
-            return cell
-        }
-            else {
-               guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoreCollectionViewCell.identifier, for: indexPath) as? MoreCollectionViewCell else {
-                   return UICollectionViewCell()
-               }
-               return cell
-
-           }
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.identifier, for: indexPath) as? PopularCollectionViewCell else {
+                    fatalError("did not cell PopularCollectionViewCell ")
+                }
+                cell.configure(with: viewModel[indexPath.item])
+                return cell
+            } else {
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoreCollectionViewCell.identifier, for: indexPath) as? MoreCollectionViewCell else {
+                    fatalError("did not cell MoreCollectionViewCell")
+                }
+                return cell
+            }
         }
     }
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let section = indexPath.section
+        if !sectionsToReload.contains(section) {
+            sectionsToReload.append(section)
+            collectionView.performBatchUpdates({ [weak self] in
+                guard let self = self else { return }
+                let indexSet = IndexSet(self.sectionsToReload)
+                collectionView.reloadSections(indexSet)
+            }, completion: nil)
+        }
+    }
+
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//
+//        let sectionType = viewModel.sections[indexPath.section]
+//        switch sectionType {
+//        case .trailer(let viewModel):
+//            if indexPath.item == 0 {
+//                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TrailerCollectionViewCell.identifier, for: indexPath) as? TrailerCollectionViewCell else {  fatalError("did not cell TrailerCollectionViewCell") }
+//                cell.configure(with: viewModel)
+//                return cell
+//            } else {
+//                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoreCollectionViewCell.identifier, for: indexPath) as? MoreCollectionViewCell else {
+//                    return UICollectionViewCell()
+//                }
+//                return cell
+//
+//            }
+//        case .now(viewModel: let viewModel):
+//            if indexPath.item <= 1 {
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NowCollectionViewCell.identifier, for: indexPath) as? NowCollectionViewCell else { return UICollectionViewCell() }
+//            cell.configure(with: viewModel[indexPath.item])
+//            return cell
+//        }
+//            else {
+//               guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoreCollectionViewCell.identifier, for: indexPath) as? MoreCollectionViewCell else {
+//                   fatalError("did not cell MoreCollectionViewCell")
+//               }
+//               return cell
+//
+//           }
+//        case .popular(viewModel: let viewModel):
+//            if indexPath.item <= 4 {
+//                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.identifier, for: indexPath) as? PopularCollectionViewCell else {
+//                    fatalError("did not cell PopularCollectionViewCell ")
+//                }
+//            cell.configure(with: viewModel[indexPath.item])
+//            return cell
+//        }
+//            else {
+//               guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoreCollectionViewCell.identifier, for: indexPath) as? MoreCollectionViewCell else {
+//                   fatalError("did not cell MoreCollectionViewCell")
+//               }
+//               return cell
+//
+//           }
+//        }
+//    }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sectionType = viewModel.sections[indexPath.section]
         switch sectionType {

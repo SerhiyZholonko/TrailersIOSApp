@@ -16,7 +16,7 @@ struct ReactionViewModel {
         return nameMoview + "Comment"
     }
     public var pFavorite: String {
-        return nameMoview + "Favorite"
+        return nameMoview
     }
     private let nameMoview: String
     

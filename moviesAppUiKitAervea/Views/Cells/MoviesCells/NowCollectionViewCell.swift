@@ -20,6 +20,7 @@ class NowCollectionViewCell: UICollectionViewCell {
     }()
     let titleLabel: UILabel = {
        let label = UILabel()
+        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -38,6 +39,7 @@ class NowCollectionViewCell: UICollectionViewCell {
     //MARK: - Public
  
     public func configure(with viewModel: NowCollectionViewCellViewModel) {
+        print("NowCollectionViewCellViewModel: ", viewModel)
 //        viewModel.fetchImage { [weak self] result in
 //            switch result {
 //            case .success(let data):
@@ -50,10 +52,12 @@ class NowCollectionViewCell: UICollectionViewCell {
 //                break
 //            }
 //        }
-        titleLabel.text = viewModel.title.uppercased()
-        movieImageView.dropShadow(cornerRadius: 15)
-        guard let url = URL(string: viewModel.urlSring) else { return }
-        movieImageView.sd_setImage(with: url)
+        DispatchQueue.main.async {
+            self.titleLabel.text = viewModel.title.uppercased()
+            self.movieImageView.dropShadow(cornerRadius: 15)
+            guard let url = URL(string: viewModel.urlSring) else { return }
+            self.movieImageView.sd_setImage(with: url)
+        }
 
     }
     //MARK: - Private

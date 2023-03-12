@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class TopTVCollectionViewCell: UICollectionViewCell {
+class RateTVCollectionViewCell: UICollectionViewCell {
     //MARK: - Properties
     static let identifier = "NowTVCollectionViewCell"
     
@@ -23,7 +23,8 @@ class TopTVCollectionViewCell: UICollectionViewCell {
     let nowTVTitleLabel: UILabel = {
        let label = UILabel()
         label.text = "Title".uppercased()
-        label.font = .boldSystemFont(ofSize: 24)
+        label.font = .boldSystemFont(ofSize: 20)
+        label.numberOfLines = 2
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -42,9 +43,12 @@ class TopTVCollectionViewCell: UICollectionViewCell {
     //MARK: - funcs
     //MARK: - Public
     public func configureCell(with viewModel: RateTVCollectionViewCellModel) {
-            nowTVTitleLabel.text = viewModel.titleTV
+        DispatchQueue.main.async {
+            self.nowTVTitleLabel.text = viewModel.titleTV
         guard let url = URL(string: viewModel.topStringUrl) else { return }
-        nowTVImageView.sd_setImage(with: url)
+            self.nowTVImageView.sd_setImage(with: url)
+        }
+       
     }
     //MARK: - Private
     private func addConstraints() {
@@ -52,7 +56,7 @@ class TopTVCollectionViewCell: UICollectionViewCell {
             nowTVImageView.topAnchor.constraint(equalTo: topAnchor),
             nowTVImageView.leftAnchor.constraint(equalTo: leftAnchor),
             nowTVImageView.rightAnchor.constraint(equalTo: rightAnchor),
-            nowTVImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
+            nowTVImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
             
             nowTVTitleLabel.topAnchor.constraint(equalTo: nowTVImageView.bottomAnchor),
             nowTVTitleLabel.leftAnchor.constraint(equalTo: leftAnchor),
