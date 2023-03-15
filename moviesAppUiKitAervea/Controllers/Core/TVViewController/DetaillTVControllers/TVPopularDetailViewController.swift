@@ -54,6 +54,11 @@ class TVPopularDetailViewController: UIViewController {
 //MARK: - ex TVPopularDetailViewDelegate
 
 extension TVPopularDetailViewController: TVPopularDetailViewDelegate {
+    func toreviewController(movieId: String) {
+        let controller = ReviewsViewController(viewModel: ReviewsViewListModel(moviewId: movieId, type: .popularTVShow))
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true)
+    }
     func toVideoControler(id: String) {
         let navVC = UINavigationController(rootViewController: TVShowVideoViewController(nibName: nil, bundle: nil, viewModel: VideoViewControllerViewModel(id: id)))
         navVC.modalPresentationStyle = .fullScreen

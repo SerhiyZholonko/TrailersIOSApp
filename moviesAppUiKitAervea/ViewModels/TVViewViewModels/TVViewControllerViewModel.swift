@@ -95,7 +95,7 @@ final class TVViewControllerViewModel {
         section.orthogonalScrollingBehavior = .continuous
         
         section.boundarySupplementaryItems = [
-            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Now", alignment: .top)
+            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Now2", alignment: .top)
             
         ]
         return section
@@ -109,7 +109,7 @@ final class TVViewControllerViewModel {
         let section = NSCollectionLayoutSection(group: group)
         
         section.boundarySupplementaryItems = [
-            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Popular", alignment: .top)
+            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .absolute(30)), elementKind: "Popular2", alignment: .top)
             
         ]
         return section

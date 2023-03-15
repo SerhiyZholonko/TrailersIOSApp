@@ -17,7 +17,7 @@ final class ProfileView: UIView {
     weak var delegate: ProfileViewDelegate?
     lazy var userImage: UIImageView = {
        let iv = UIImageView()
-        iv.image = UIImage(named: "placeholder")
+        iv.image = UIImage(named: "logo1")
         iv.layer.cornerRadius = 50
         iv.clipsToBounds = true
         iv.layer.borderColor = UIColor.systemGray.cgColor
@@ -30,7 +30,7 @@ final class ProfileView: UIView {
     }()
     var userLabel : UILabel = {
         let label = UILabel()
-        label.text = "User name"
+        label.text = "Enter your name"
         label.textAlignment = .center
         label.layer.cornerRadius = 10
         label.clipsToBounds = true

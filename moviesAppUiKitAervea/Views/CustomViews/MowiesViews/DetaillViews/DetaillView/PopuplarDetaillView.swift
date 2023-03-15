@@ -10,6 +10,7 @@ import SDWebImage
 
 protocol PopuplarDetaillViewDelegate: AnyObject {
     func toVideoController(id: String)
+    func toreviewController(movieId: String)
 }
 
 class PopuplarDetaillView: UIView {
@@ -261,6 +262,7 @@ extension PopuplarDetaillView: ReactionViewDalegate {
     
     func didTappedComment() {
         print("Comment main delegate")
+        delegate?.toreviewController(movieId: "\(viewModel.publicId)")
     }
     
     func didTappedLike() {

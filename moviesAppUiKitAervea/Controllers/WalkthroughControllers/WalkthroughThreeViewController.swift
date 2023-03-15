@@ -67,7 +67,7 @@ class WalkthroughThreeViewController: UIViewController {
 extension WalkthroughThreeViewController: WalkthroughViewDelegate {
     func didTappedButton() {
         
-        let vc = MoviesViewController()
+        let vc =  MainTabViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -24,7 +24,7 @@ class ReviewsViewHeader: UIView {
         button.addTarget(self, action: #selector(didTappedBack), for: .touchUpInside)
         return button
     }()
-    let reviewsLabel: UILabel = {
+    var reviewsLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

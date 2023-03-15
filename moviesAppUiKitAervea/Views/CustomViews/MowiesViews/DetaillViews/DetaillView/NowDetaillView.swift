@@ -257,7 +257,7 @@ extension NowDetaillView: ReactionViewDalegate {
     }
     
     func didTappedComment() {
-        print("Comment main delegate")
+
         delegate?.toreviewController(movieId: viewModel.pId)
     }
     

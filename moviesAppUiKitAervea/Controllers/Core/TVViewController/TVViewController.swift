@@ -118,6 +118,18 @@ extension TVViewController: UICollectionViewDelegate, UICollectionViewDataSource
         }
         
     }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == "Now2" {
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:   MoviewsHeaderNowCollectionReusableView.identifier, for: indexPath) as! MoviewsHeaderNowCollectionReusableView
+            return header
+        } else  {
+            let header =
+            collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:   MoviewsHeaderPopularCollectionReusableView.identifier, for: indexPath) as! MoviewsHeaderPopularCollectionReusableView
+            return header
+        }
+        
+    }
+  
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sectionType = viewModel.sections[indexPath.section]
 

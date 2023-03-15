@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1804203629BF6ECE00259034 /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804203529BF6ECE00259034 /* ReviewCollectionViewCell.swift */; };
 		18044CC5298F880000A47C3C /* NumbersChangeSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18044CC4298F880000A47C3C /* NumbersChangeSize.swift */; };
 		18044CC9298FAF4500A47C3C /* RateTVDetaillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18044CC8298FAF4500A47C3C /* RateTVDetaillView.swift */; };
 		18044CCB298FAF9000A47C3C /* MovieDetaillTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18044CCA298FAF9000A47C3C /* MovieDetaillTwoViewController.swift */; };
@@ -89,6 +90,8 @@
 		1889A93929878C0F00AD8B18 /* PopularCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889A93829878C0F00AD8B18 /* PopularCollectionViewCellViewModel.swift */; };
 		1889A93B29878C3800AD8B18 /* NowCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889A93A29878C3800AD8B18 /* NowCollectionViewCellViewModel.swift */; };
 		1889A93D29878C5900AD8B18 /* TrailerCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889A93C29878C5900AD8B18 /* TrailerCollectionViewCellViewModel.swift */; };
+		188A856229C0C05F00A0E5AC /* TVReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A856129C0C05F00A0E5AC /* TVReviewController.swift */; };
+		188A856429C1E35900A0E5AC /* TVReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A856329C1E35900A0E5AC /* TVReviewModel.swift */; };
 		188CD78C2999252F00125F72 /* RateDetaillTVViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CD78B2999252F00125F72 /* RateDetaillTVViewModel.swift */; };
 		189EBFDF298E23A6005B2646 /* CPeopleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EBFDE298E23A6005B2646 /* CPeopleController.swift */; };
 		189EBFE1298E28E6005B2646 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EBFE0298E28E6005B2646 /* ExtensionUIViewController.swift */; };
@@ -156,6 +159,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1804203529BF6ECE00259034 /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		18044CC4298F880000A47C3C /* NumbersChangeSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersChangeSize.swift; sourceTree = "<group>"; };
 		18044CC8298FAF4500A47C3C /* RateTVDetaillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTVDetaillView.swift; sourceTree = "<group>"; };
 		18044CCA298FAF9000A47C3C /* MovieDetaillTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetaillTwoViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 		1889A93829878C0F00AD8B18 /* PopularCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		1889A93A29878C3800AD8B18 /* NowCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		1889A93C29878C5900AD8B18 /* TrailerCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		188A856129C0C05F00A0E5AC /* TVReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVReviewController.swift; sourceTree = "<group>"; };
+		188A856329C1E35900A0E5AC /* TVReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVReviewModel.swift; sourceTree = "<group>"; };
 		188CD78B2999252F00125F72 /* RateDetaillTVViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateDetaillTVViewModel.swift; sourceTree = "<group>"; };
 		189EBFDE298E23A6005B2646 /* CPeopleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPeopleController.swift; sourceTree = "<group>"; };
 		189EBFE0298E28E6005B2646 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
@@ -317,6 +323,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1804203729BF71AB00259034 /* ReviewCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1804203529BF6ECE00259034 /* ReviewCollectionViewCell.swift */,
+			);
+			path = ReviewCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		18044CC3298F87BF00A47C3C /* RateView */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,18 +491,18 @@
 			isa = PBXGroup;
 			children = (
 				189EBFDE298E23A6005B2646 /* CPeopleController.swift */,
-				184533BC29AA07870021657B /* New Group */,
+				184533BC29AA07870021657B /* PeopleDetail */,
 			);
 			path = PeopleController;
 			sourceTree = "<group>";
 		};
-		184533BC29AA07870021657B /* New Group */ = {
+		184533BC29AA07870021657B /* PeopleDetail */ = {
 			isa = PBXGroup;
 			children = (
 				184533BA29A9E9D40021657B /* CPeopleDetailViewController.swift */,
 				184533BD29AA07B00021657B /* CPeopleDetaillView.swift */,
 			);
-			path = "New Group";
+			path = PeopleDetail;
 			sourceTree = "<group>";
 		};
 		18545FEC299E4EC200C9605D /* VideoController */ = {
@@ -538,6 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				1865543029ACF87500E68973 /* ReviewsViewController.swift */,
+				188A856129C0C05F00A0E5AC /* TVReviewController.swift */,
 				1865543629ACFF2500E68973 /* MainReviewsController.swift */,
 				1865543329ACF8B100E68973 /* ReviewsView.swift */,
 			);
@@ -667,6 +682,7 @@
 				183F698729AE462400250E90 /* CommentCell */,
 				1881C9922991345D0022D41E /* MoviesCells */,
 				1881C9932991346D0022D41E /* TVCells */,
+				1804203729BF71AB00259034 /* ReviewCollectionViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -815,6 +831,7 @@
 				185C099A2998B97300733C13 /* Movie */,
 				183F698C29AE469500250E90 /* Comment.swift */,
 				18CEAB1D29AF50D800E530C4 /* ReviewModel.swift */,
+				188A856329C1E35900A0E5AC /* TVReviewModel.swift */,
 			);
 			path = MovieModel;
 			sourceTree = "<group>";
@@ -1223,6 +1240,7 @@
 				18CEAB1C29AF4CAC00E530C4 /* ReviewsViewListModel.swift in Sources */,
 				18AE6FE42994FD4B00F5CC06 /* ServiceModel.swift in Sources */,
 				18C1D29C299FC83100DE7BA0 /* AlertViewModel.swift in Sources */,
+				188A856429C1E35900A0E5AC /* TVReviewModel.swift in Sources */,
 				18CDFEC7299B83F500756006 /* CPeopleControllerViewModel.swift in Sources */,
 				18A20B2C29B1FEC900F29D40 /* FavoriteCell.swift in Sources */,
 				18A20B3429B2386400F29D40 /* FavoriteCellViewModel.swift in Sources */,
@@ -1255,6 +1273,7 @@
 				1889A93B29878C3800AD8B18 /* NowCollectionViewCellViewModel.swift in Sources */,
 				18DD3BA62983F2910013FB7A /* WalkthroughOneViewController.swift in Sources */,
 				18F96C15298B7C530044950E /* MoreCollectionViewCell.swift in Sources */,
+				188A856229C0C05F00A0E5AC /* TVReviewController.swift in Sources */,
 				18F55A8329990138003DCBB9 /* MoreTopTVShowController.swift in Sources */,
 				18F55A8D2999110F003DCBB9 /* MorePopularListViewModel.swift in Sources */,
 				18DD3BAC2983F6020013FB7A /* WalkthroughView.swift in Sources */,
@@ -1284,6 +1303,7 @@
 				1836508E29A20FEF0021E647 /* SearchViewController.swift in Sources */,
 				18C1D296299FC3FB00DE7BA0 /* CustomAletViewController.swift in Sources */,
 				18CDFEC9299B887700756006 /* ActorModel.swift in Sources */,
+				1804203629BF6ECE00259034 /* ReviewCollectionViewCell.swift in Sources */,
 				1883E79929A63A9C00212F48 /* LikeReactionSubView.swift in Sources */,
 				187470FA2992A45E009466E3 /* Request.swift in Sources */,
 				18CB141C299D07AE0024A765 /* MovieDetailModel.swift in Sources */,

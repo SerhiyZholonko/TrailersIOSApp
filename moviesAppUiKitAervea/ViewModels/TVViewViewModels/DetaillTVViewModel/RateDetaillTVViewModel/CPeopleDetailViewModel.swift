@@ -36,7 +36,6 @@ struct CPeopleDetailViewModel {
     }
     public var imageUrl: String {
         guard let actor = actor else { return "" }
-        print("Url: ",  "https://www.themoviedb.org/t/p/original/" + actor.placeOfBirth)
         guard let supStringUrl = actor.profilePath else { return "" }
         return "https://www.themoviedb.org/t/p/original/" + supStringUrl
     }
@@ -51,15 +50,16 @@ struct CPeopleDetailViewModel {
     }
     
     //MARK: - Public
-    public mutating func fetchSingleActor() {
+    public mutating func fetchSingleActor(complition: @escaping (Error?) -> Void) {
         Service.shared.execute(Request(endPoint: .person, pathComponnents: [actorId], queryParammeters: [URLQueryItem(name: "api_key", value: "8983d582e6db4d50746d8e03ec9e79f5")]), exepting: ActorModel.self) { [self] curentActor in
             var viewModel = self
             switch curentActor {
             case .success(let actor):
                 viewModel.actor = actor
                 delegate?.reloadModel(viewModel: viewModel)
-            case .failure(_):
-                break
+            case .failure(let error):
+                print("data is nil: ", error)
+                complition(error)
             }
         }
     }

@@ -16,13 +16,13 @@ class TrailerCollectionViewCell: UICollectionViewCell {
     }()
     let logoImage: UIImageView = {
        let iv = UIImageView()
-        iv.image = UIImage(named: "logo")
+        iv.image = UIImage(named: "logo1")
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "MAO TRAILER"
+        label.text = "FAVORITE MOVIE"
         label.font = .systemFont(ofSize: 16)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -30,7 +30,7 @@ class TrailerCollectionViewCell: UICollectionViewCell {
     }()
     let versionLabel: UILabel = {
        let label = UILabel()
-        label.text = "V 0.1"
+        label.text = "V 1.0"
         label.font = .systemFont(ofSize: 14)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false

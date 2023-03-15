@@ -55,7 +55,6 @@ final class MovieNowListViewModel: NSObject {
                     let newNowMovie = NowCollectionViewCellViewModel(movie: movie)
                     self?.viewModel.append(newNowMovie)
                 }
-                print("Count1: ", self?.viewModel.count)
                 self?.delegate?.reloadCollectionView()
             case .failure(let error):
 //                self?.delegate?.showAlert(wit: error)

@@ -27,7 +27,7 @@ class ReactionView: UIView {
         return view
     }()
     lazy var comentView:  CommentReactionSubView = {
-        let viewModel = ReactionSubViewModel(imageName: "text.bubble", title: "COMMENT", likerMarker: viewModel.pLike, favoriteMarker: viewModel.pFavorite, commentMarker: viewModel.pComment)
+        let viewModel = ReactionSubViewModel(imageName: "text.bubble", title: "REVIEWS", likerMarker: viewModel.pLike, favoriteMarker: viewModel.pFavorite, commentMarker: viewModel.pComment)
         let view = CommentReactionSubView(frame: .zero, viewModel: viewModel)
         return view
     }()

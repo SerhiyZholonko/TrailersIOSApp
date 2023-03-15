@@ -23,6 +23,16 @@ final class CPeopleDetaillView: UIView {
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()
+    let emptyDataLabel: UILabel = {
+       let label = UILabel()
+        label.text = "There is no information about this actor"
+        label.font = .boldSystemFont(ofSize: 18)
+        label.numberOfLines = 2
+        label.textColor = .systemGray
+        label.alpha = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     let supNameLabel: UILabel = {
         let label = UILabel()
         label.text = "name"
@@ -148,10 +158,24 @@ final class CPeopleDetaillView: UIView {
         addSubview(closeButton)
         addSubview(actorLabelsStack)
         addSubview(contentScrollView)
+        addSubview(emptyDataLabel)
         addConstraints()
         setupScrollView(view: contentScrollView)
         setupViews()
-        self.viewModel.fetchSingleActor()
+        self.viewModel.fetchSingleActor{[weak self] error in
+            if error != nil {
+                DispatchQueue.main.async {
+                    self?.bioLabel.alpha = 0
+                    self?.genderLabel.alpha = 0
+                    self?.birthdayLabel.alpha = 0
+                    self?.nameLabel.alpha = 0
+                    self?.supNameLabel.alpha = 0
+                    self?.supGenderLabel.alpha = 0
+                    self?.supBirthdayLabel.alpha = 0
+                    self?.emptyDataLabel.alpha = 1
+                }
+            }
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -179,6 +203,9 @@ final class CPeopleDetaillView: UIView {
             contentScrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
             contentScrollView.rightAnchor.constraint(equalTo: rightAnchor),
 
+            emptyDataLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            emptyDataLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20),
+            emptyDataLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -20)
 
         ])
     }

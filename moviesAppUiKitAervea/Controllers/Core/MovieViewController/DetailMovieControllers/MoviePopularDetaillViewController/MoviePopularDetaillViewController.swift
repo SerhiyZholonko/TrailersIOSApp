@@ -50,13 +50,24 @@ class MoviePopularDetaillViewController: UIViewController {
     
 }
 
+
+    
+
 //MARK: ex  PopuplarDetaillViewDelegate
 
 extension MoviePopularDetaillViewController: PopuplarDetaillViewDelegate {
+    
+    func toreviewController(movieId: String) {
+        let controller = ReviewsViewController(viewModel: ReviewsViewListModel(moviewId: movieId, type: .popularMovie))
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true)
+    }
     func toVideoController(id: String) {
         let vc = MoviesVideoViewController(nibName: nil, bundle: nil, viewModel: VideoViewControllerViewModel(id: id))
         let navVC = UINavigationController(rootViewController: vc)
         navVC.modalPresentationStyle = .fullScreen
         present(navVC, animated: true)
     }
+
+
 }

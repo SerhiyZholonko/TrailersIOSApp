@@ -52,6 +52,11 @@ class TVNowDetailViewController: UIViewController {
 
 
 extension TVNowDetailViewController: TVNowDetailViewDeligate {
+    func toreviewController(movieId: String) {
+        let controller = ReviewsViewController(viewModel: ReviewsViewListModel(moviewId: movieId, type: .topTVShow))
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true)
+    }
     func toVideo(id: String) {
         let vc = TVShowVideoViewController(nibName: nil, bundle: nil, viewModel: VideoViewControllerViewModel(id: id))
         let navVC = UINavigationController(rootViewController: vc)

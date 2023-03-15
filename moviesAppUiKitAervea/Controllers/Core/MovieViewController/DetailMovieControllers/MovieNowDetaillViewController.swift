@@ -56,7 +56,7 @@ class MovieNowDetaillViewController: UIViewController {
 
 extension MovieNowDetaillViewController: NowDetaillViewDelegtae {
     func toreviewController(movieId: String) {
-        let controller = ReviewsViewController(viewModel: ReviewsViewListModel(moviewId: movieId))
+        let controller = ReviewsViewController(viewModel: ReviewsViewListModel(moviewId: movieId, type: .nowMovie))
         controller.modalPresentationStyle = .fullScreen
         present(controller, animated: true)
     }

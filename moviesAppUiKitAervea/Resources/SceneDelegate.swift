@@ -24,6 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            layout.scrollDirection = .vertical
             
             window.rootViewController = UINavigationController(rootViewController: MainTabViewController())
+//            UINavigationController(rootViewController: WalkthroughOneViewController())
+
 
 //            UINavigationController(rootViewController: CPeopleDetailViewController(viewModel: CPeopleDetailViewControllerModel(actorId: "1083010")))
 

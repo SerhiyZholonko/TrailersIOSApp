@@ -9,6 +9,7 @@ import UIKit
 import SDWebImage
 
 protocol TVPopularDetailViewDelegate: AnyObject {
+    func toreviewController(movieId: String)
     func toVideoControler(id: String)
 }
 
@@ -247,8 +248,7 @@ extension TVPopularDetailView: ReactionViewDalegate {
     }
     
     func didTappedComment() {
-        print("Comment main delegate")
-//        delegate?.toreviewController(movieId: viewModel.pId)
+        delegate?.toreviewController(movieId: "\(viewModel.movieId)")
     }
     
     func didTappedLike() {

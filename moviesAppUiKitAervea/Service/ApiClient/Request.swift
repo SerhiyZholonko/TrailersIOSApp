@@ -42,6 +42,7 @@ final class Request {
         return string
     }
     public var url: URL? {
+        print("URL: ", urlString)
         return URL(string: urlString)
     }
     public let httpMethod = "GET"

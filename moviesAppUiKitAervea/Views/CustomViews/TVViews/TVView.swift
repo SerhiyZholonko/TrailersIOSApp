@@ -68,7 +68,8 @@ class TVView: UIView {
         }
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(MoviewsHeaderPopularCollectionReusableView.self, forSupplementaryViewOfKind: "Popular", withReuseIdentifier: MoviewsHeaderPopularCollectionReusableView.identifier)
+        collectionView.register(MoviewsHeaderNowCollectionReusableView.self, forSupplementaryViewOfKind: "Now2", withReuseIdentifier: MoviewsHeaderNowCollectionReusableView.identifier)
+        collectionView.register(MoviewsHeaderPopularCollectionReusableView.self, forSupplementaryViewOfKind: "Popular2", withReuseIdentifier: MoviewsHeaderPopularCollectionReusableView.identifier)
         collectionView.register(PopularTVCollectionViewCell.self, forCellWithReuseIdentifier: PopularTVCollectionViewCell.identifier)
         collectionView.register(RateTVCollectionViewCell.self, forCellWithReuseIdentifier: RateTVCollectionViewCell.identifier)
         collectionView.register(MoreCollectionViewCell.self, forCellWithReuseIdentifier: MoreCollectionViewCell.identifier)
